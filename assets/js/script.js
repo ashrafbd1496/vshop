@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------------
 
- Template Name:Multikart
- Template URI: themes.pixelstrap.com/multikart
- Description: This is E-commerce website
- Author: Pixelstrap
- Author URI: https://themeforest.net/user/pixelstrap
+ Template Name:Vegetable Shop
+ Template URI: https://vshop.ashrafbd.com
+ Description: Vegetable Shop E-commerce Theme
+ Author: Ashraf
+ Author URI: https://vshop.ashrafbd.com
 
  ----------------------------------------------------------------------------------- */
 // 01.Pre loader
@@ -351,6 +351,8 @@
      14. slick slider
      ==========================*/
     $('.slide-1').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
     });
 
     $('.slide-center').slick({
@@ -358,6 +360,7 @@
         centerPadding: '120px',
         slidesToShow: 2,
         slidesToScroll: 2,
+
     });
 
     $('#quick-view').on('shown.bs.modal', function () {

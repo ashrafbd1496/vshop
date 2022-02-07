@@ -103,22 +103,22 @@ jQuery(document).ready(function($) {
 |
 */		
 
-	// myTheme.Fancybox = function () {
-	//
-	// 	$(".fancybox-pop").fancybox({
-	// 		maxWidth	: 900,
-	// 		maxHeight	: 700,
-	// 		fitToView	: true,
-	// 		width		: '80%',
-	// 		height		: '80%',
-	// 		autoSize	: false,
-	// 		closeClick	: false,
-	// 		openEffect	: 'elastic',
-	// 		closeEffect	: 'none'
-	// 	});
-	//
-	// };
-	//
+	myTheme.Fancybox = function () {
+	
+		$(".fancybox-pop").fancybox({
+			maxWidth	: 900,
+			maxHeight	: 700,
+			fitToView	: true,
+			width		: '80%',
+			height		: '80%',
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'elastic',
+			closeEffect	: 'none'
+		});
+	
+	};
+	
 		
 	
 	
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
 */
 	
 	myTheme.Isotope();
-	// myTheme.Fancybox();
+	myTheme.Fancybox();
 	
 	
 

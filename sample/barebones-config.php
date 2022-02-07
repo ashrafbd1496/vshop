@@ -237,6 +237,7 @@ $kses_exceptions = array(
 	'br'     => array(),
 );
 
+//Homepage options
 Redux::set_section(
 	$opt_name,
 	array(
@@ -246,7 +247,7 @@ Redux::set_section(
 	'icon'   => 'el el-home',
 ));
 
-
+//Header Options
 Redux::set_section( $opt_name,
 	array(
 	'title'  => esc_html__( 'Header Options', 'vshop' ),
@@ -270,6 +271,7 @@ Redux::set_section( $opt_name,
 	
 ));
 
+//Home Slider Options
 Redux::set_section( $opt_name,
 	array(
 	'title'  => esc_html__( 'Home Slider', 'vshop' ),
@@ -286,12 +288,18 @@ Redux::set_section( $opt_name,
 	        'button' => esc_html__('Button text', 'vshop'),
 	        'url'         => esc_html__('https://localhost/vshop/shop', 'vshop'),
 	    ),
-
 	),
+		 array(
+	    	'id'	=>'button_text',
+	    	'type'	=>'text',
+	    	'title'       => esc_html__('Button Text', 'vshop'),
+	    	'default'	=> 'Shop Now',
+
+	    ),
 	
 )));
 
-
+//
 
 
 

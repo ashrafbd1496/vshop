@@ -27,7 +27,7 @@
                                 <div class="slider-contain">
                                     <div>
                                         <h4><?php echo $vslide['description']; ?></h4>
-                                        <h1><?php echo $vslide['title']; ?></h1><a href="<?php echo $vslide['url']; ?>" class="btn btn-solid">shop now</a>
+                                        <h1><?php echo $vslide['title']; ?></h1><a href="<?php echo $vslide['url']; ?>" class="btn btn-solid"><?php echo $vshop_demo['button_text']; ?></a>
                                     </div>
                                 </div>
                             </div>
