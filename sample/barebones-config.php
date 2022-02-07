@@ -225,15 +225,9 @@ Redux::set_help_sidebar( $opt_name, $content );
  * <--- END HELP TABS
  */
 
-/*
- *
- * ---> BEGIN SECTIONS
- *
- */
 
-/* As of Redux 3.5+, there is an extensive API. This API can be used in a mix/match mode allowing for. */
 
-/* -> START Basic Fields. */
+/** Start sections */
 
 $kses_exceptions = array(
 	'a'      => array(
@@ -243,31 +237,20 @@ $kses_exceptions = array(
 	'br'     => array(),
 );
 
-$section = array(
+Redux::set_section(
+	$opt_name,
+	array(
 	'title'  => esc_html__( 'Homepage Options', 'vshop' ),
 	'id'     => 'vshop_homepage',
 	'desc'   => esc_html__( 'Homepage Options are here.', 'vshop' ),
 	'icon'   => 'el el-home',
-	// 'fields' => array(
-	// 	array(
-	// 		'id'       => 'opt-text',
-	// 		'type'     => 'text',
-	// 		'title'    => esc_html__( 'Example Text', 'vshop' ),
-	// 		'desc'     => esc_html__( 'Example description.', 'vshop' ),
-	// 		'subtitle' => esc_html__( 'Example subtitle.', 'vshop' ),
-	// 		'hint'     => array(
-	// 			'content' => wp_kses( __( 'This is a <strong>hint</strong> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.', 'vshop' ), $kses_exceptions ),
-	// 		),
-	// 	),
-	// ),
-);
+));
 
-Redux::set_section( $opt_name, $section );
 
-$section = array(
+Redux::set_section( $opt_name,
+	array(
 	'title'  => esc_html__( 'Header Options', 'vshop' ),
 	'id'     => 'vshop_header_options',
-	'icon'   => 'el el-home',
 	'subsection'=> true,
 	'fields'	=>array(
 		array(
@@ -285,9 +268,44 @@ $section = array(
 
 	),
 	
-);
+));
 
-Redux::set_section( $opt_name, $section );
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Home Slider', 'vshop' ),
+	'id'     => 'home_slider',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'v_slide',
+	    'type'        => 'slides',
+	    'title'       => esc_html__('Slides Options', 'vshop'),
+	    'placeholder' => array(
+	        'title'       => esc_html__('Fresh Vegetable Default Title', 'vshop'),
+	        'description' => esc_html__('Fresh Vegetable Default Description', 'vshop'),
+	        'button' => esc_html__('Button text', 'vshop'),
+	        'url'         => esc_html__('https://localhost/vshop/shop', 'vshop'),
+	    ),
+
+	),
+	
+)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $section = array(

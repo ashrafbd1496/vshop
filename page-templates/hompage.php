@@ -13,16 +13,21 @@
     <!-- Home slider -->
     <section class="p-0">
         <div class="slide-1 home-slider">
+
             <div>
+
+                <?php $v_slider = $vshop_demo['v_slide'];
+                    foreach($v_slider as $vslide ): ?>
+
                 <div class="home text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-banner/39.jpg" alt="" class="bg-img blur-up lazyload">
+                    <img src="<?php echo $vslide['image']; ?>" alt="" class="bg-img blur-up lazyload">
                     <div class="container">
                         <div class="row">
                             <div class="col">
                                 <div class="slider-contain">
                                     <div>
-                                        <h4>save 10%</h4>
-                                        <h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>
+                                        <h4><?php echo $vslide['description']; ?></h4>
+                                        <h1><?php echo $vslide['title']; ?></h1><a href="<?php echo $vslide['url']; ?>" class="btn btn-solid">shop now</a>
                                     </div>
                                 </div>
                             </div>
@@ -30,23 +35,12 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="home text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home-banner/38.jpg" alt="" class="bg-img blur-up lazyload">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="slider-contain">
-                                    <div>
-                                        <h4>save upto 10%</h4>
-                                        <h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+          <?php endforeach; ?>
+ 
+        <?php  //print_r($vslide); ?>
+
+
         </div>
     </section>
     <!-- Home slider end -->
