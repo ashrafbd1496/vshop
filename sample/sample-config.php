@@ -13,7 +13,7 @@ if ( ! class_exists( 'Redux' ) ) {
 }
 
 // This is your option name where all the Redux data is stored.
-$opt_name = 'vshop_demo';  // YOU MUST CHANGE THIS.  DO NOT USE 'redux_demo' IN YOUR PROJECT!!!
+$opt_name = 'redux_demo';  // YOU MUST CHANGE THIS.  DO NOT USE 'redux_demo' IN YOUR PROJECT!!!
 
 // Uncomment to disable demo mode.
 /* Redux::disable_demo(); */  // phpcs:ignore Squiz.PHP.CommentedOutCode
@@ -86,10 +86,10 @@ $args = array(
 	'allow_sub_menu'            => true,
 
 	// The text to appear in the admin menu.
-	'menu_title'                => esc_html__( 'Sample Options', 'vshop' ),
+	'menu_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
 
 	// The text to appear on the page title.
-	'page_title'                => esc_html__( 'Sample Options', 'vshop' ),
+	'page_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
 
 	// Disable to create your own Google fonts loader.
 	'disable_google_fonts_link' => false,
@@ -107,7 +107,7 @@ $args = array(
 	'global_variable'           => $opt_name,
 
 	// Show the time the page took to load, etc. (forced on while on localhost or when WP_DEBUG is enabled).
-	'dev_mode'                  => false,
+	'dev_mode'                  => true,
 
 	// Enable basic customizer support.
 	'customizer'                => true,
@@ -162,7 +162,7 @@ $args = array(
 	'output_tag'                => true,
 
 	// Disable the footer credit of Redux. Please leave if you can help it.
-	'footer_credit'             => ' ',
+	'footer_credit'             => '',
 
 	// If you prefer not to use the CDN for ACE Editor.
 	// You may download the Redux Vendor Support plugin to run locally or embed it in your code.
@@ -222,21 +222,44 @@ $args = array(
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-docs',
 	'href'  => '//devs.redux.io/',
-	'title' => __( 'Documentation', 'vshop' ),
+	'title' => __( 'Documentation', 'your-textdomain-here' ),
 );
 
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-support',
 	'href'  => '//github.com/ReduxFramework/redux-framework/issues',
-	'title' => __( 'Support', 'vshop' ),
+	'title' => __( 'Support', 'your-textdomain-here' ),
 );
 
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-extensions',
 	'href'  => 'redux.io/extensions',
-	'title' => __( 'Extensions', 'vshop' ),
+	'title' => __( 'Extensions', 'your-textdomain-here' ),
 );
 
+// SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
+// PLEASE CHANGE THEME BEFORE RELEASING YOUR PRODUCT!!
+// If these are left unchanged, they will not display in your panel!
+$args['share_icons'][] = array(
+	'url'   => '//github.com/ReduxFramework/ReduxFramework',
+	'title' => 'Visit us on GitHub',
+	'icon'  => 'el el-github',
+);
+$args['share_icons'][] = array(
+	'url'   => '//www.facebook.com/pages/Redux-Framework/243141545850368',
+	'title' => 'Like us on Facebook',
+	'icon'  => 'el el-facebook',
+);
+$args['share_icons'][] = array(
+	'url'   => '//twitter.com/reduxframework',
+	'title' => 'Follow us on Twitter',
+	'icon'  => 'el el-twitter',
+);
+$args['share_icons'][] = array(
+	'url'   => '//www.linkedin.com/company/redux-framework',
+	'title' => 'Find us on LinkedIn',
+	'icon'  => 'el el-linkedin',
+);
 
 // Panel Intro text -> before the form.
 if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] ) {
@@ -247,13 +270,13 @@ if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] )
 	}
 
 	// translators:  Panel opt_name.
-	$args['intro_text'] = '<p>' . sprintf( esc_html__( '', 'vshop' ), '<strong>' . $v . '</strong>' ) . '<p>';
+	$args['intro_text'] = '<p>' . sprintf( esc_html__( 'Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: $%1$s', 'your-textdomain-here' ), '<strong>' . $v . '</strong>' ) . '<p>';
 } else {
-	$args['intro_text'] = '<p>' . esc_html__( '', 'vshop' ) . '</p>';
+	$args['intro_text'] = '<p>' . esc_html__( 'This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
 }
 
 // Add content after the form.
-$args['footer_text'] = '<p>' . esc_html__( '', 'vshop' ) . '</p>';
+$args['footer_text'] = '<p>' . esc_html__( 'This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
 
 Redux::set_args( $opt_name, $args );
 
@@ -267,19 +290,19 @@ Redux::set_args( $opt_name, $args );
 $help_tabs = array(
 	array(
 		'id'      => 'redux-help-tab-1',
-		'title'   => esc_html__( 'Theme Information 1', 'vshop' ),
-		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'vshop' ) . '</p>',
+		'title'   => esc_html__( 'Theme Information 1', 'your-textdomain-here' ),
+		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'your-textdomain-here' ) . '</p>',
 	),
 	array(
 		'id'      => 'redux-help-tab-2',
-		'title'   => esc_html__( 'Theme Information 2', 'vshop' ),
-		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'vshop' ) . '</p>',
+		'title'   => esc_html__( 'Theme Information 2', 'your-textdomain-here' ),
+		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'your-textdomain-here' ) . '</p>',
 	),
 );
 Redux::set_help_tab( $opt_name, $help_tabs );
 
 // Set the help sidebar.
-$content = '<p>' . esc_html__( 'This is the sidebar content, HTML is allowed.', 'vshop' ) . '</p>';
+$content = '<p>' . esc_html__( 'This is the sidebar content, HTML is allowed.', 'your-textdomain-here' ) . '</p>';
 
 Redux::set_help_sidebar( $opt_name, $content );
 
@@ -295,9 +318,9 @@ Redux::set_help_sidebar( $opt_name, $content );
 Redux::set_section(
 	$opt_name,
 	array(
-		'title'            => esc_html__( 'Basic Fields', 'vshop' ),
+		'title'            => esc_html__( 'Basic Fields', 'your-textdomain-here' ),
 		'id'               => 'basic',
-		'desc'             => esc_html__( 'These are really basic fields!', 'vshop' ),
+		'desc'             => esc_html__( 'These are really basic fields!', 'your-textdomain-here' ),
 		'customizer_width' => '400px',
 		'icon'             => 'el el-home',
 	)
@@ -315,7 +338,7 @@ require_once Redux_Core::$dir . '../sample/sections/basic-fields/textarea.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title'            => esc_html__( 'Editors', 'vshop' ),
+		'title'            => esc_html__( 'Editors', 'your-textdomain-here' ),
 		'id'               => 'editor',
 		'customizer_width' => '500px',
 		'icon'             => 'el el-edit',
@@ -329,7 +352,7 @@ require_once Redux_Core::$dir . '../sample/sections/editors/ace-editor.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Color Selection', 'vshop' ),
+		'title' => esc_html__( 'Color Selection', 'your-textdomain-here' ),
 		'id'    => 'color',
 		'icon'  => 'el el-brush',
 	)
@@ -346,7 +369,7 @@ require_once Redux_Core::$dir . '../sample/sections/color-selection/color-palett
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Design Fields', 'vshop' ),
+		'title' => esc_html__( 'Design Fields', 'your-textdomain-here' ),
 		'id'    => 'design',
 		'icon'  => 'el el-wrench',
 	)
@@ -362,7 +385,7 @@ require_once Redux_Core::$dir . '../sample/sections/design-fields/spacing.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Media Uploads', 'vshop' ),
+		'title' => esc_html__( 'Media Uploads', 'your-textdomain-here' ),
 		'id'    => 'media',
 		'icon'  => 'el el-picture',
 	)
@@ -376,7 +399,7 @@ require_once Redux_Core::$dir . '../sample/sections/media-uploads/slides.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Presentation Fields', 'vshop' ),
+		'title' => esc_html__( 'Presentation Fields', 'your-textdomain-here' ),
 		'id'    => 'presentation',
 		'icon'  => 'el el-screen',
 	)
@@ -398,7 +421,7 @@ Redux::set_section(
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Switch / Button Set', 'vshop' ),
+		'title' => esc_html__( 'Switch / Button Set', 'your-textdomain-here' ),
 		'id'    => 'switch_buttonset',
 		'icon'  => 'el el-cogs',
 	)
@@ -411,7 +434,7 @@ require_once Redux_Core::$dir . '../sample/sections/switch-button/switch.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Select Fields', 'vshop' ),
+		'title' => esc_html__( 'Select Fields', 'your-textdomain-here' ),
 		'id'    => 'select',
 		'icon'  => 'el el-list-alt',
 	)
@@ -425,7 +448,7 @@ require_once Redux_Core::$dir . '../sample/sections/select-fields/select-image.p
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Slider / Spinner', 'vshop' ),
+		'title' => esc_html__( 'Slider / Spinner', 'your-textdomain-here' ),
 		'id'    => 'slider_spinner',
 		'icon'  => 'el el-adjust-alt',
 	)
@@ -441,7 +464,7 @@ require_once Redux_Core::$dir . '../sample/sections/typography/typography.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Additional Types', 'vshop' ),
+		'title' => esc_html__( 'Additional Types', 'your-textdomain-here' ),
 		'id'    => 'additional',
 		'icon'  => 'el el-magic',
 	)
@@ -454,7 +477,7 @@ require_once Redux_Core::$dir . '../sample/sections/additional-types/raw.php';
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Advanced Features', 'vshop' ),
+		'title' => esc_html__( 'Advanced Features', 'your-textdomain-here' ),
 		'icon'  => 'el el-thumbs-up',
 	)
 );
@@ -476,7 +499,7 @@ require_once Redux_Core::$dir . '../sample/sections/advanced-features/wpml-integ
 Redux::set_section(
 	$opt_name,
 	array(
-		'title' => esc_html__( 'Disabling', 'vshop' ),
+		'title' => esc_html__( 'Disabling', 'your-textdomain-here' ),
 		'icon'  => 'el el-lock',
 	)
 );
@@ -493,11 +516,11 @@ if ( class_exists( 'Redux_Pro' ) ) {
 	Redux::set_section(
 		$opt_name,
 		array(
-			'title' => esc_html__( 'Redux Pro Fields', 'vshop' ),
+			'title' => esc_html__( 'Redux Pro Fields', 'your-textdomain-here' ),
 			'id'    => 'redux-pro-fields',
 			'icon'  => 'el el-redux',
 			'class' => 'pro_highlight',
-			'desc'  => esc_html__( 'For full documentation on this field, visit: ', 'vshop' ) . '<a href="https://devs.redux.io/premium/" target="_blank">https://devs.redux.io/premium/</a>',
+			'desc'  => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/premium/" target="_blank">https://devs.redux.io/premium/</a>',
 		)
 	);
 
@@ -526,7 +549,7 @@ require_once Redux_Core::$dir . '../sample/metaboxes.php';
 if ( file_exists( $dir . '/../README.md' ) ) {
 	$section = array(
 		'icon'   => 'el el-list-alt',
-		'title'  => esc_html__( 'Documentation', 'vshop' ),
+		'title'  => esc_html__( 'Documentation', 'your-textdomain-here' ),
 		'fields' => array(
 			array(
 				'id'           => 'opt-raw-documentation',
@@ -544,21 +567,21 @@ Redux::set_section(
 	$opt_name,
 	array(
 		'icon'            => 'el el-list-alt',
-		'title'           => esc_html__( 'Customizer Only', 'vshop' ),
-		'desc'            => '<p class="description">' . esc_html__( 'This Section should be visible only in Customizer', 'vshop' ) . '</p>',
+		'title'           => esc_html__( 'Customizer Only', 'your-textdomain-here' ),
+		'desc'            => '<p class="description">' . esc_html__( 'This Section should be visible only in Customizer', 'your-textdomain-here' ) . '</p>',
 		'customizer_only' => true,
 		'fields'          => array(
 			array(
 				'id'              => 'opt-customizer-only',
 				'type'            => 'select',
-				'title'           => esc_html__( 'Customizer Only Option', 'vshop' ),
-				'subtitle'        => esc_html__( 'The subtitle is NOT visible in customizer', 'vshop' ),
-				'desc'            => esc_html__( 'The field desc is NOT visible in customizer.', 'vshop' ),
+				'title'           => esc_html__( 'Customizer Only Option', 'your-textdomain-here' ),
+				'subtitle'        => esc_html__( 'The subtitle is NOT visible in customizer', 'your-textdomain-here' ),
+				'desc'            => esc_html__( 'The field desc is NOT visible in customizer.', 'your-textdomain-here' ),
 				'customizer_only' => true,
 				'options'         => array(
-					'1' => esc_html__( 'Opt 1', 'vshop' ),
-					'2' => esc_html__( 'Opt 2', 'vshop' ),
-					'3' => esc_html__( 'Opt 3', 'vshop' ),
+					'1' => esc_html__( 'Opt 1', 'your-textdomain-here' ),
+					'2' => esc_html__( 'Opt 2', 'your-textdomain-here' ),
+					'3' => esc_html__( 'Opt 3', 'your-textdomain-here' ),
 				),
 				'default'         => '2',
 			),
@@ -666,8 +689,8 @@ if ( ! function_exists( 'dynamic_section' ) ) {
 	 */
 	function dynamic_section( array $sections ): array {
 		$sections[] = array(
-			'title'  => esc_html__( 'Section via hook', 'vshop' ),
-			'desc'   => '<p class="description">' . esc_html__( 'This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.', 'vshop' ) . '</p>',
+			'title'  => esc_html__( 'Section via hook', 'your-textdomain-here' ),
+			'desc'   => '<p class="description">' . esc_html__( 'This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.', 'your-textdomain-here' ) . '</p>',
 			'icon'   => 'el el-paper-clip',
 
 			// Leave this as a blank section, no options just some intro text set above.
@@ -703,7 +726,7 @@ if ( ! function_exists( 'change_defaults' ) ) {
 	 * @return array
 	 */
 	function change_defaults( array $defaults ): array {
-		$defaults['str_replace'] = esc_html__( 'Testing filter hook!', 'vshop' );
+		$defaults['str_replace'] = esc_html__( 'Testing filter hook!', 'your-textdomain-here' );
 
 		return $defaults;
 	}

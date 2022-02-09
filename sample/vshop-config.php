@@ -363,6 +363,60 @@ $section = array(
 
 Redux::set_section( $opt_name, $section );
 
+$section = array(
+    'title' => esc_html__('Repeater Field', 'your-textdomain-here' ),
+    'icon' => 'el-icon-thumbs-up',
+    'fields' => array(
+        array(
+            'id'             => 'repeater-field-id',
+            'type'           => 'repeater',
+            'title'          => esc_html__( 'Title', 'your-textdomain-here' ),
+            'subtitle'       => esc_html__( '', 'your-textdomain-here' ),
+            'desc'           => esc_html__( '', 'your-textdomain-here' ),
+            //'group_values' => true, // Group all fields below within the repeater ID
+            //'item_name'    => '', // Add a repeater block name to the Add and Delete buttons
+            //'bind_title'   => '', // Bind the repeater block title to this field ID
+            //'static'       => 2, // Set the number of repeater blocks to be output
+            //'limit'        => 2, // Limit the number of repeater blocks a user can create
+            //'sortable'     => false, // Allow the users to sort the repeater blocks or not
+            'fields'         => array(
+                array(
+                    'id'          => 'title_field',
+                    'type'        => 'text',
+                    'placeholder' => esc_html__( 'Title', 'your-textdomain-here' ),
+                ),
+                array(
+                    'id'          => 'text_field',
+                    'type'        => 'text',
+                    'placeholder' => esc_html__( 'Text Field', 'your-textdomain-here' ),
+                ),
+                array(
+                    'id'      => 'select_field',
+                    'type'    => 'select',
+                    'title'   => esc_html__( 'Select Field', 'your-textdomain-here' ),
+                    'options' => array(
+                        '1'      => esc_html__( 'Option 1', 'your-textdomain-here' ),
+                        '2'      => esc_html__( 'Option 2', 'your-textdomain-here' ),
+                        '3'      => esc_html__( 'Option 3', 'your-textdomain-here' ),
+                    ),
+                    'placeholder' => esc_html__( 'Listing Field', 'your-textdomain-here' ),
+                ),
+            )
+        )
+    )
+);
+
+Redux::set_section( $opt_name, $section );
+
+
+
+
+
+
+
+
+
+
 /*
  * <--- END SECTIONS
  */
