@@ -1,7 +1,10 @@
 <?php
 
- require_once (dirname(__FILE__) . '/sample/vshop-config.php');
- 
+ require_once (dirname(__FILE__) . '/sample/redux-config.php');
+ require_once (dirname(__FILE__) . '/inc/carbon-options.php');
+ require_once(dirname(__FILE__) . '/lib/carbon-fields/vendor/autoload.php');
+
+
 /**
  * vshop functions and definitions
  *
@@ -187,6 +190,9 @@ function vshop_scripts() {
 
  //slick js
        wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.js', array(), _S_VERSION, true );
+
+       wp_enqueue_script( 'slick-animation-js', get_template_directory_uri() . '/assets/js/slick-animation.min.js', array(), _S_VERSION, true );
+
 
    //bootstrap js
 
