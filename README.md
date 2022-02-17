@@ -1,2 +1,2 @@
-## Vegetable shop Woocommerce Theme Development Project
+## Vegetable Shop Woocommerce Theme Development Project
 

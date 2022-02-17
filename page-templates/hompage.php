@@ -58,11 +58,8 @@
 
                           <div class="col-md-4 service-block">
                             <div class="media">
-                                
-                                <?php 
-                                $b_icon = $banner['b_item_icon'];
-                                var_dump($b_icon);
 
+                                <?php 
                                 echo $banner['b_item_icon']; 
                                 ?>
 
