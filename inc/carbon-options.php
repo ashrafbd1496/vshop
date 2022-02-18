@@ -14,12 +14,12 @@ function crb_attach_theme_options() {
 
     Container::make( 'theme_options', __( 'Carbon Options' ) )
         ->add_fields( array(
-            Field::make( 'checkbox', 'crb_show_content', 'Show content' ),
+            Field::make( 'checkbox', 'crb_hide_content', 'Hide Banner Options' ),
             Field::make( 'complex', 'crb_banners', 'Banners' )
                  ->set_conditional_logic( array(
                         array(
-                            'field' => 'crb_show_content',
-                            'value' => true,
+                            'field' => 'crb_hide_content',
+                            'value' => false,
                         )
                         ), )
                 ->set_layout( 'tabbed-horizontal' )

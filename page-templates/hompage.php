@@ -49,6 +49,7 @@
 
 
     <!-- collection banner -->
+    <?php if(carbon_get_theme_option('crb_hide_content')==false): ?>
     <section class="banner-padding absolute-banner pb-0">
         <div class="container absolute-bg">
             <div class="service p-0">
@@ -78,6 +79,7 @@
             </div>
         </div>
     </section>
+<?php endif; ?>
     <!-- collection banner end -->
 
 
@@ -87,7 +89,7 @@
             <div class="row">
                 <div class="col">
                     <div class="title4">
-                        <h2 class="title-inner4">trending products</h2>
+                        <h2 class="title-inner4"><?php echo $vshop_demo['t_product_titile']; ?></h2>
                         <div class="line"><span></span></div>
                     </div>
                     <div class="product-5 product-m no-arrow">
@@ -404,7 +406,7 @@
         <div class="full-box">
             <div class="container">
                 <div class="title4">
-                    <h2 class="title-inner4">special products</h2>
+                    <h2 class="title-inner4"><?php echo $vshop_demo['sp_product_titile']; ?></h2>
                     <div class="line"><span></span></div>
                 </div>
                 <div class="row">

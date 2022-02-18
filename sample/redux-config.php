@@ -346,6 +346,55 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Trending Product  Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Products Section Options', 'vshop' ),
+	'id'     => 't_product',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 't_product_titile',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Trending Product Title', 'vshop'),
+	     'default'  =>  esc_html__('Trending Products', 'vshop'),
+	    
+	),
+		array(
+	 	'id'          => 'sp_product_titile',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Special Product Title', 'vshop'),
+	     'default'  =>  esc_html__('Special Products', 'vshop'),
+	    
+	),
+	
+)));
+
+
+//Footer Product  Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Products Section Options', 'vshop' ),
+	'id'     => 't_product',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 't_product_titile',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Trending Product Title', 'vshop'),
+	     'default'  =>  esc_html__('Trending Products', 'vshop'),
+	    
+	),
+		array(
+	 	'id'          => 'sp_product_titile',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Special Product Title', 'vshop'),
+	     'default'  =>  esc_html__('Special Products', 'vshop'),
+	    
+	),
+	
+)));
+
 
 
 
