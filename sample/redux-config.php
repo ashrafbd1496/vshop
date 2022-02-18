@@ -279,6 +279,13 @@ Redux::set_section( $opt_name,
 	'subsection'=> true,
 	'fields'	=>array(
 		array(
+	 	'id'          => 'show_slider_section',
+	    'type'        => 'switch',
+	    'title'       => esc_html__('Show/Hide Slider Section', 'vshop'),
+	    'default'	=>true,
+		),
+	   
+	    array(
 	 	'id'          => 'v_slide',
 	    'type'        => 'slides',
 	    'title'       => esc_html__('Slides Options', 'vshop'),
@@ -287,8 +294,8 @@ Redux::set_section( $opt_name,
 	        'description' => esc_html__('Fresh Vegetable Default Description', 'vshop'),
 	        'button' => esc_html__('Button text', 'vshop'),
 	        'url'         => esc_html__('https://localhost/vshop/shop', 'vshop'),
-	    ),
-	),
+	   ) ),
+	
 		 array(
 	    	'id'	=>'button_text',
 	    	'type'	=>'text',
@@ -310,6 +317,9 @@ Redux::set_section( $opt_name,
 	 	'id'          => 'p_banner_bg',
 	    'type'        => 'background',
 	    'title'       => esc_html__('Parallax Banner background', 'vshop'),
+	     'default'  => array(
+        'background-color' => '#E9EAEE',
+    ),
 	    
 	),
 		 array(
