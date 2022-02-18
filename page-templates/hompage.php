@@ -54,24 +54,24 @@
                     <?php 
 
                         $banners = carbon_get_theme_option( 'crb_banners' );
-                        foreach ( $banners as $banner ): ?>
+                        foreach ( $banners as $banner ): 
+                                 $b_icon = $banner['b_item_icon'];
+                            ?>
 
                           <div class="col-md-4 service-block">
-                            <div class="media">
+                            <div class="media">                        
 
-                                <?php 
-                                echo $banner['b_item_icon']; 
-                                ?>
-
+                              <i class="fa <?php echo $b_icon['class']; ?>"  aria-hidden="true"></i>
+                                
+                          </div>
                               <div class="media-body">
                                     <h4><?php echo $banner['b_item_title']; ?></h4>
                                     <p><?php echo $banner['b_item_des']; ?></p>
                                 </div>
-                            </div>
                         </div>
 
                        <?php endforeach; ?>
-
+                            
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@
     <!-- Parallax banner -->
     <section class="p-0">
         <div class="full-banner parallax text-start p-left">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/parallax/15.jpg" alt="" class="bg-img blur-up lazyload">
+            <img src="<?php echo $vshop_demo['p_banner_bg'];?>" alt="" class="bg-img blur-up lazyload">
             <div class="container">
                 <div class="row">
                     <div class="col">

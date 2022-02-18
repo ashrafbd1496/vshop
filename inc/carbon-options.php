@@ -11,6 +11,7 @@ use Carbon_Fields\Field;
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 
 function crb_attach_theme_options() {
+
     Container::make( 'theme_options', __( 'Carbon Options' ) )
         ->add_fields( array(
             Field::make( 'complex', 'crb_banners', 'Banners' )
@@ -23,9 +24,18 @@ function crb_attach_theme_options() {
                     ->set_default_value('fa-truck'),
                     Field::make( 'text', 'b_item_des', 'Banner Item Description' ),
                 ) ),
-        ) )->add_fields(array(
-            Field::make('icon','test_icon','Test Icon'),
-        ));
+        ) );
+
+
+
+
+
+
+
+
+
+
+        
 }
 
 

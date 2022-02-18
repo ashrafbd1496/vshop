@@ -23,10 +23,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
-
-
-
-
+ .service-block .media i {
+    margin-right: 12px;
+    font-size: 50px;
+    color: #ff4c3b;
+}
 
 
 

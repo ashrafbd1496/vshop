@@ -299,6 +299,60 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Parallax Banner  Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Parallax Banner', 'vshop' ),
+	'id'     => 'parallax_banner',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'p_banner_bg',
+	    'type'        => 'background',
+	    'title'       => esc_html__('Parallax Banner background', 'vshop'),
+	    
+	),
+		 array(
+	    	'id'	=>'p_heading1',
+	    	'type'	=>'text',
+	    	'title'       => esc_html__('Parallax Heading one', 'vshop'),
+	    	'default'	=> '2022',
+
+	    ),
+		  array(
+	    	'id'	=>'p_heading2',
+	    	'type'	=>'text',
+	    	'title'       => esc_html__('Parallax Heading Two', 'vshop'),
+	    	'default'	=> 'Food Market',
+
+	    ),
+		   array(
+	    	'id'	=>'p_heading3',
+	    	'type'	=>'text',
+	    	'title'       => esc_html__('Parallax Heading Three', 'vshop'),
+	    	'default'	=> 'Special Offer',
+
+	    ),
+	
+)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 
 // $section = array(
