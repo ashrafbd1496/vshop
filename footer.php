@@ -1,4 +1,7 @@
   <!-- footer start -->
+  <?php 
+        global $vshop_demo;
+   ?>
     <footer class="footer-light">
         <div class="light-layout">
             <div class="container">
@@ -7,8 +10,8 @@
                         <div class="col-lg-6">
                             <div class="subscribe">
                                 <div>
-                                    <h4>KNOW IT ALL FIRST!</h4>
-                                    <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter.</p>
+                                    <h4><?php echo $vshop_demo['f_left_title']; ?></h4>
+                                    <p><?php echo $vshop_demo['f_left_desc']; ?></p>
                                 </div>
                             </div>
                         </div>

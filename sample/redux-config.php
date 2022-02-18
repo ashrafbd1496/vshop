@@ -357,39 +357,39 @@ Redux::set_section( $opt_name,
 	 	'id'          => 't_product_titile',
 	    'type'        => 'text',
 	    'title'       => esc_html__('Trending Product Title', 'vshop'),
-	     'default'  =>  esc_html__('Trending Products', 'vshop'),
+	     'default'  => 'Trending Products',
 	    
 	),
 		array(
 	 	'id'          => 'sp_product_titile',
 	    'type'        => 'text',
 	    'title'       => esc_html__('Special Product Title', 'vshop'),
-	     'default'  =>  esc_html__('Special Products', 'vshop'),
+	     'default'  =>  'Special Products',
 	    
 	),
 	
 )));
 
 
-//Footer Product  Section Options
+//Footer Subscribe  Section Options
 Redux::set_section( $opt_name,
 	array(
-	'title'  => esc_html__( 'Products Section Options', 'vshop' ),
-	'id'     => 't_product',
+	'title'  => esc_html__( 'Footer Subscribe Section Options', 'vshop' ),
+	'id'     => 'footer_subscribe',
 	'subsection'=> true,
 	'fields'	=>array(
 		array(
-	 	'id'          => 't_product_titile',
+	 	'id'          => 'f_left_title',
 	    'type'        => 'text',
-	    'title'       => esc_html__('Trending Product Title', 'vshop'),
-	     'default'  =>  esc_html__('Trending Products', 'vshop'),
+	    'title'       => esc_html__('Footer Subscribe Title', 'vshop'),
+	     'default'  =>  'KNOW IT ALL FIRST!',
 	    
 	),
 		array(
-	 	'id'          => 'sp_product_titile',
+	 	'id'          => 'f_left_desc',
 	    'type'        => 'text',
-	    'title'       => esc_html__('Special Product Title', 'vshop'),
-	     'default'  =>  esc_html__('Special Products', 'vshop'),
+	    'title'       => esc_html__('Footer Subscribe Description', 'vshop'),
+	     'default'  =>  'Never Miss Anything From Multikart By Signing Up To Our Newsletter.',
 	    
 	),
 	
