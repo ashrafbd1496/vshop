@@ -16,16 +16,9 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form
-                                action="https://pixelstrap.us19.list-manage.com/subscribe/post?u=5a128856334b598b395f1fc9b&amp;id=082f74cbda"
-                                class="form-inline subscribe-form auth-form needs-validation" method="post"
-                                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                                <div class="form-group mx-sm-3">
-                                    <input type="text" class="form-control" name="EMAIL" id="mce-EMAIL"
-                                        placeholder="Enter your email" required="required">
-                                </div>
-                                <button type="submit" class="btn btn-solid" id="mc-submit">subscribe</button>
-                            </form>
+
+                           <?php echo do_shortcode('[contact-form-7 id="105" title="Vshop Subscribe Form"]'); ?>
+
                         </div>
                     </div>
                 </section>

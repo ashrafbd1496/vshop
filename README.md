@@ -1,7 +1,7 @@
 ## Vegetable Shop Woocommerce Theme Development Project
 
 ### Lists of the plugins used for this project
-- woocommerce
+- Woocommerce
 - Carbonfields
 - Redux
 - Contact form 7
