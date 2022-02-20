@@ -255,6 +255,13 @@ Redux::set_section( $opt_name,
 	'subsection'=> true,
 	'fields'	=>array(
 		array(
+	 	'id'          => 'site_logo',
+	    'type'        => 'media',
+	    'title'       => esc_html__('Site Logo', 'vshop'),
+	    
+	    
+	),
+		array(
 			'id'       => 'welcome_text',
 			'type'     => 'text',
 			'title'    => esc_html__( 'Welcome Text', 'vshop' ),
@@ -270,6 +277,8 @@ Redux::set_section( $opt_name,
 	),
 	
 ));
+
+
 
 //Home Slider Options
 Redux::set_section( $opt_name,
@@ -371,28 +380,62 @@ Redux::set_section( $opt_name,
 )));
 
 
-//Footer Subscribe  Section Options
+//Footer options
+Redux::set_section(
+	$opt_name,
+	array(
+	'title'  => esc_html__( 'Footer Options', 'vshop' ),
+	'id'     => 'vshop_footer',
+	'desc'   => esc_html__( 'Footer Options are here.', 'vshop' ),
+	'icon'   => 'el el-lines',
+));
+
+//Footer Subscribe Options
 Redux::set_section( $opt_name,
 	array(
-	'title'  => esc_html__( 'Footer Subscribe Section Options', 'vshop' ),
+	'title'  => esc_html__( 'Footer Subscribe Options', 'vshop' ),
 	'id'     => 'footer_subscribe',
 	'subsection'=> true,
 	'fields'	=>array(
 		array(
-	 	'id'          => 'f_left_title',
+			'id'       => 'f_left_title',
+			'type'     => 'text',
+			'title'    => esc_html__( 'Footer Subscribe Title', 'vshop' ),
+			'default'  => 'KNOW IT ALL FIRST!',
+		),
+		array(
+			'id'       => 'f_left_desc',
+			'type'     => 'text',
+			'title'    => esc_html__( 'Footer Subscribe Description', 'vshop' ),
+			'default'  => 'Never Miss Anything From Multikart By Signing Up To Our Newsletter.',
+		),
+
+	),
+	
+));
+
+
+//Footer Middle  Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Footer Middle', 'vshop' ),
+	'id'     => 'footer_middle',
+	'subsection'	=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'footer_desc',
 	    'type'        => 'text',
-	    'title'       => esc_html__('Footer Subscribe Title', 'vshop'),
-	     'default'  =>  'KNOW IT ALL FIRST!',
+	    'title'       => esc_html__('Footer Description', 'vshop'),
+	     'default'  =>  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
 	    
 	),
 		array(
-	 	'id'          => 'f_left_desc',
-	    'type'        => 'text',
-	    'title'       => esc_html__('Footer Subscribe Description', 'vshop'),
-	     'default'  =>  'Never Miss Anything From Multikart By Signing Up To Our Newsletter.',
-	    
+
+		 'id'       => 'footer_social',
+	    'type'     => 'gallery',
+	    'title'    => esc_html__('Add Social Icons', 'vshop'),
 	),
-	
+	    
 )));
 
 
@@ -408,11 +451,6 @@ Redux::set_section( $opt_name,
 
 
 
-
-
-
-
-//
 
 // $section = array(
 //     'title' => esc_html__('Banner OPtions', 'vshop' ),

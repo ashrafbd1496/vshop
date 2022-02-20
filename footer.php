@@ -32,10 +32,11 @@
                             <h4>about</h4>
                         </div>
                         <div class="footer-contant">
-                            <div class="footer-logo"><img src="../assets/images/icon/logo.png" alt=""></div>
+                            <div class="footer-logo"><img src="<?php echo $vshop_demo['site_logo']['url']; ?>" alt=""></div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                             <div class="footer-social">
+                                
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>

@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <div class="brand-logo layout2-logo">
-                    <a href="#"><img src="../assets/images/icon/vegetable-logo50.png" class="img-fluid blur-up lazyload"
+                    <a href="#"><img src="<?php echo $vshop_demo['site_logo']['url']; ?>" class="img-fluid blur-up lazyload"
                             alt=""></a>
                 </div>
                 <div class="menu-right pull-right">
