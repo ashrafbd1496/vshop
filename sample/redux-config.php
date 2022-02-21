@@ -435,65 +435,43 @@ Redux::set_section( $opt_name,
 	    'type'     => 'gallery',
 	    'title'    => esc_html__('Add Social Icons', 'vshop'),
 	),
+		array(
+
+		 'id'       => 'footer_social_links',
+	    'type'     => 'text',
+	    'title'    => esc_html__('Add Social Links', 'vshop'),
+	),
 	    
 )));
 
 
+//Footer social icon test option
+// Redux::set_section( $opt_name,
+// 	array(
+// 	'title'  => esc_html__( 'Footer Soical', 'vshop' ),
+// 	'id'     => 'footer_social_option',
+// 	'subsection'=> true,
+// 	'fields'	=>array(
+	   
+// 	    array(
+// 	 	'id'          => 'footer_soical_icon',
+// 	    'type'        => 'slides',
+// 	    'title'       => esc_html__('Soical Icon Options', 'vshop'),
+// 	    'placeholder' => array(
+// 	        'title'       => esc_html__('Socil Icon Title', 'vshop'),
+// 	        'button' => esc_html__('Button text', 'vshop'),
+// 	        'url'         => esc_html__('https://facebook.com', 'vshop'),
+// 	   ) ),
+	
+// 		 // array(
+// 	  //   	'id'	=>'button_text',
+// 	  //   	'type'	=>'text',
+// 	  //   	'title'       => esc_html__('Button Text', 'vshop'),
+// 	  //   	'default'	=> 'Shop Now',
 
-
-
-
-
-
-
-
-
-
-
-
-
-// $section = array(
-//     'title' => esc_html__('Banner OPtions', 'vshop' ),
-//     'icon' => 'el-icon-flag',
-//     'fields' => array(
-//         array(
-//             'id'             => 'repeater-field-id',
-//             'type'           => 'repeater',
-//             'title'          => esc_html__( 'Banners', 'vshop' ),
-        
-//             //'group_values' => true, // Group all fields below within the repeater ID
-//             //'item_name'    => '', // Add a repeater block name to the Add and Delete buttons
-//             //'bind_title'   => '', // Bind the repeater block title to this field ID
-//             //'static'       => 2, // Set the number of repeater blocks to be output
-//             //'limit'        => 2, // Limit the number of repeater blocks a user can create
-//             //'sortable'     => false, // Allow the users to sort the repeater blocks or not
-//             'fields'         => array(
-//                 array(
-//                     'id'          => 'banner_item_title',
-//                     'type'        => 'text',
-//                     'placeholder' => esc_html__( 'Banner Item Title', 'vshop' ),
-//                 ),
-             
-//                 array(
-//                     'id'      => 'banner_item_desc',
-//                     'type'    => 'text',
-//                     'placeholder' => esc_html__( 'Banner Item Description', 'vshop' ),
-//                 ),
-//             )
-//         )
-//     )
-// );
-
-// Redux::set_section( $opt_name, $section );
-
-
-
-
-
-
-
-
-
+// 	  //   ),
+	
+// )));
 
 /*
  * <--- END SECTIONS

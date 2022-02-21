@@ -38,11 +38,20 @@
                             <div class="footer-social">
                                 
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                <?php 
+
+                                 $images_ids = $vshop_demo['footer_social'];
+
+                                 $single_image_id = explode(',',$images_ids);                    
+                                 
+                                 foreach($single_image_id as $g_image): 
+                                    $single_g_image = wp_get_attachment_image_src($g_image);
+                                
+                                    ?>
+                                    <li><a href="#"><img src="<?php echo $single_g_image[0]; ?>" alt=""></a></li>
+                               
+
+                                 <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>

@@ -29,7 +29,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #ff4c3b;
 }
 
-
+.footer-social img {
+  width: 25px;
+  height: auto;
+}
 
 
 
