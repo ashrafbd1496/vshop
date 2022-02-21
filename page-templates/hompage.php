@@ -49,27 +49,24 @@
 
 
     <!-- collection banner -->
-    <?php if(carbon_get_theme_option('crb_hide_content')==false): ?>
+    
     <section class="banner-padding absolute-banner pb-0">
         <div class="container absolute-bg">
             <div class="service p-0">
                 <div class="row">
-                    <?php 
 
-                        $banners = carbon_get_theme_option( 'crb_banners' );
-                        foreach ( $banners as $banner ): 
-                                 $b_icon = $banner['b_item_icon'];
-                            ?>
+                    <?php $v_banner = $vshop_demo['v_banner'];
+                    foreach($v_banner as $vbanner ): ?>
+
 
                           <div class="col-md-4 service-block">
                             <div class="media">                        
 
-                              <i class="fa <?php echo $b_icon['class']; ?>"  aria-hidden="true"></i>
-                                
+                              <img src="<?php echo $vbanner['image']; ?>" alt="">
                           </div>
                               <div class="media-body">
-                                    <h4><?php echo $banner['b_item_title']; ?></h4>
-                                    <p><?php echo $banner['b_item_des']; ?></p>
+                                    <h4><?php echo $vbanner['title']; ?></h4>
+                                    <p><?php echo $vbanner['description']; ?></p>
                                 </div>
                         </div>
 
@@ -79,7 +76,7 @@
             </div>
         </div>
     </section>
-<?php endif; ?>
+
     <!-- collection banner end -->
 
 
@@ -555,8 +552,8 @@
         <div class="row">
             <div class="col">
                 <div class="title4">
-                    <h4>recent story</h4>
-                    <h2 class="title-inner4">from the blog</h2>
+                    <h4><?php echo $vshop_demo['blog_subtitle']; ?></h4>
+                    <h2 class="title-inner4"><?php echo $vshop_demo['blog_title']; ?></h2>
                     <div class="line"><span></span></div>
                 </div>
             </div>
@@ -567,7 +564,40 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="slide-3 no-arrow">
-                        <div class="col-md-12">
+                               <?php
+                                  $args = array(
+                                     'post_type' => 'post',
+                                     'posts_per_page' => -1,
+                                     'order' => 'DESC'
+                                  );
+                                  $query = new WP_Query($args);
+                                     while($query -> have_posts()){
+                                        $query ->the_post();?>
+                                        
+                                         <div class="col-md-12">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="classic-effect">
+                                                    <div>
+                                                        <img src="<?php the_post_thumbnail_url(); ?>"
+                                                            class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    </div>
+                                                    <span></span>
+                                                </div>
+                                            </a>
+                                            <div class="blog-details">
+                                                <h4><?php the_date(); ?></h4>
+                                                <a href="#">
+                                                    <p><?php echo wp_trim_words( get_the_content(), 8, '...' );?></p>
+                                                </a>
+                                                <hr class="style1">
+                                                <h6>by: <?php the_author(); ?> , <?php echo get_comments_number();?></h6>
+                                            </div>
+                                        </div>
+                                              
+                                     <?php }
+                               
+                               ?>
+                       <!--  <div class="col-md-12">
                             <a href="#">
                                 <div class="classic-effect">
                                     <div>
@@ -643,6 +673,7 @@
                                 <h6>by: John Dio , 2 Comment</h6>
                             </div>
                         </div>
+ -->
                     </div>
                 </div>
             </div>

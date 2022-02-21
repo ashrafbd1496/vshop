@@ -1,7 +1,7 @@
 <?php
 
  require_once (dirname(__FILE__) . '/sample/redux-config.php');
- require_once (dirname(__FILE__) . '/inc/carbon-options.php');
+//require_once (dirname(__FILE__) . '/inc/carbon-options.php');
  require_once(dirname(__FILE__) . '/lib/carbon-fields/vendor/autoload.php');
 
 
@@ -181,17 +181,17 @@ function vshop_scripts() {
  */
 
     //menu js
-    wp_enqueue_script( 'menu-js', get_template_directory_uri() . '/assets/js/menu.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'menu-js', get_template_directory_uri() . '/assets/js/menu.js', array(),time(), true );
 
 
     //lazyload js
-     wp_enqueue_script( 'lazysizes-js', get_template_directory_uri() . '/assets/js/lazysizes.min.js', array(), _S_VERSION, true );
+     wp_enqueue_script( 'lazysizes-js', get_template_directory_uri() . '/assets/js/lazysizes.min.js', array(),time(), true );
 
 
  //slick js
-       wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.js', array(), _S_VERSION, true );
+       wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.js', array(),time(), true );
 
-       wp_enqueue_script( 'slick-animation-js', get_template_directory_uri() . '/assets/js/slick-animation.min.js', array(), _S_VERSION, true );
+       wp_enqueue_script( 'slick-animation-js', get_template_directory_uri() . '/assets/js/slick-animation.min.js', array(),time(), true );
 
 
    //bootstrap js
@@ -203,10 +203,11 @@ function vshop_scripts() {
 
    //Theme setting js
     wp_enqueue_script('theme-setting-js',get_theme_file_uri('/assets/js/theme-setting.js'),['jquery'],'default',true);
-    
-    wp_enqueue_script( 'vshop-js', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 
-	wp_enqueue_script( 'vshop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( 'vshop-navigation', get_template_directory_uri() . '/js/navigation.js', array(),time(), true );
+
+    wp_enqueue_script( 'vshop-js', get_template_directory_uri() . '/assets/js/script.js', ['jquery'],time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

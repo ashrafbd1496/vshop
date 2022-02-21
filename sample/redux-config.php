@@ -315,6 +315,28 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Banner Options
+
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Banner Options', 'vshop' ),
+	'id'     => 'vshop_banner',
+	'subsection'=> true,
+	'fields'	=>array(
+	   
+	    array(
+	 	'id'          => 'v_banner',
+	    'type'        => 'slides',
+	    'title'       => esc_html__('Banner Options', 'vshop'),
+	    'placeholder' => array(
+	        'title'       => esc_html__('Banner Image Title', 'vshop'),
+	        'description' => esc_html__('Banner Description', 'vshop'),
+	        'url'	=>'#',
+	       
+	   ) ),
+	
+)));
+
 //Parallax Banner  Section Options
 Redux::set_section( $opt_name,
 	array(
@@ -379,6 +401,31 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Blog Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Blog Section Options', 'vshop' ),
+	'id'     => 'v_blog',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'blog_subtitle',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Blog Sub Title', 'vshop'),
+	     'default'  => 'recent story',
+	    
+	),
+		array(
+	 	'id'          => 'blog_title',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Blog Title', 'vshop'),
+	     'default'  =>  'from the blog',
+	    
+	),
+	
+)));
+
+
 
 //Footer options
 Redux::set_section(
@@ -432,7 +479,7 @@ Redux::set_section( $opt_name,
 	    
 )));
 
-//Footer social icon test option
+//Footer social icon  option
 Redux::set_section( $opt_name,
 	array(
 	'title'  => esc_html__( 'Footer Soical', 'vshop' ),
@@ -451,6 +498,15 @@ Redux::set_section( $opt_name,
 	   ) ),
 	
 )));
+
+
+
+
+
+
+
+
+
 
 /*
  * <--- END SECTIONS
