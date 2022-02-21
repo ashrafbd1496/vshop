@@ -429,49 +429,28 @@ Redux::set_section( $opt_name,
 	     'default'  =>  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
 	    
 	),
-		array(
-
-		 'id'       => 'footer_social',
-	    'type'     => 'gallery',
-	    'title'    => esc_html__('Add Social Icons', 'vshop'),
-	),
-		array(
-
-		 'id'       => 'footer_social_links',
-	    'type'     => 'text',
-	    'title'    => esc_html__('Add Social Links', 'vshop'),
-	),
 	    
 )));
 
-
 //Footer social icon test option
-// Redux::set_section( $opt_name,
-// 	array(
-// 	'title'  => esc_html__( 'Footer Soical', 'vshop' ),
-// 	'id'     => 'footer_social_option',
-// 	'subsection'=> true,
-// 	'fields'	=>array(
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Footer Soical', 'vshop' ),
+	'id'     => 'footer_social_option',
+	'subsection'=> true,
+	'fields'	=>array(
 	   
-// 	    array(
-// 	 	'id'          => 'footer_soical_icon',
-// 	    'type'        => 'slides',
-// 	    'title'       => esc_html__('Soical Icon Options', 'vshop'),
-// 	    'placeholder' => array(
-// 	        'title'       => esc_html__('Socil Icon Title', 'vshop'),
-// 	        'button' => esc_html__('Button text', 'vshop'),
-// 	        'url'         => esc_html__('https://facebook.com', 'vshop'),
-// 	   ) ),
+	    array(
+	 	'id'          => 'footer_soical_icon',
+	    'type'        => 'slides',
+	    'title'       => esc_html__('Soical Icon Options', 'vshop'),
+	    'placeholder' => array(
+	        'title'       => esc_html__('Socil Icon Title', 'vshop'),
+	        'button' => esc_html__('Add Icon', 'vshop'),
+	        'url'         => esc_html__('https://facebook.com', 'vshop'),
+	   ) ),
 	
-// 		 // array(
-// 	  //   	'id'	=>'button_text',
-// 	  //   	'type'	=>'text',
-// 	  //   	'title'       => esc_html__('Button Text', 'vshop'),
-// 	  //   	'default'	=> 'Shop Now',
-
-// 	  //   ),
-	
-// )));
+)));
 
 /*
  * <--- END SECTIONS

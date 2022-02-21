@@ -40,15 +40,19 @@
                                 <ul>
                                 <?php 
 
-                                 $images_ids = $vshop_demo['footer_social'];
 
-                                 $single_image_id = explode(',',$images_ids);                    
+                                 $footer_social = $vshop_demo['footer_soical_icon'];
+                                    foreach($footer_social as $social ):
+
+                                 // $images_ids = $vshop_demo['footer_social'];
+
+                                 // $single_image_id = explode(',',$images_ids);                    
                                  
-                                 foreach($single_image_id as $g_image): 
-                                    $single_g_image = wp_get_attachment_image_src($g_image);
+                                 // foreach($single_image_id as $g_image): 
+                                 //    $single_g_image = wp_get_attachment_image_src($g_image);
                                 
                                     ?>
-                                    <li><a href="#"><img src="<?php echo $single_g_image[0]; ?>" alt=""></a></li>
+                                    <li><a href="<?php echo $social['url']; ?>"><img src="<?php echo $social['image']; ?>" alt=""></a></li>
                                
 
                                  <?php endforeach; ?>
