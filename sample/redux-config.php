@@ -425,6 +425,52 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//About us page options
+Redux::set_section(
+	$opt_name,
+	array(
+	'title'  => esc_html__( 'aboutus page Options', 'vshop' ),
+	'id'     => 'vshop_aboutus',
+	'desc'   => esc_html__( 'About Us Page Options are here.', 'vshop' ),
+	'icon'   => 'el el-braille',
+));
+
+//About Us banner Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Banner Section Options', 'vshop' ),
+	'id'     => 'a_banner',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'a_baanner_img',
+	    'type'        => 'media',
+	    'title'       => esc_html__('Banner Image', 'vshop'),
+	    
+	    
+	),
+		array(
+	 	'id'          => 'banner_title',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Banner Title', 'vshop'),
+	     'default'  =>  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium ',
+	    
+	),
+		array(
+	 	'id'          => 'banner_desc',
+	    'type'        => 'text',
+	    'title'       => esc_html__('Banner Description', 'vshop'),
+	     'default'  =>  'lorem impsum doller test demo for description',
+	    
+	),
+	
+)));
+
+
+
+
+
+
 
 
 //Footer options
