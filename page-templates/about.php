@@ -56,90 +56,40 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="slide-2 testimonial-slider no-arrow">
+
+                         <?php 
+
+                        $images = $vshop_demo['t_item_image'];
+                         $names= $vshop_demo['t_item_name'];
+                         $desigs = $vshop_demo['t_item_desig'];
+                         $descs = $vshop_demo['t_item_desc'];
+
+                         foreach($images as $image){
+                         foreach($names as $name){
+                            foreach($desigs as $desig){
+                                foreach($descs as $desc){ ?>
+                      
+                 
+                          
                         <div>
                             <div class="media">
                                 <div class="text-center">
-                                    <img src="../assets/images/avtar.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
+                                    <img src="<?php echo $image['url']; ?>" alt="#">
+                                    <h5><?php  echo $name; ?></h5>
+                                    <h6><?php echo $desig;  ?></h6>
                                 </div>
                                 <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
+                                   <?php echo $desc; ?>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="../assets/images/2.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
-                                </div>
-                                <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="../assets/images/avtar.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
-                                </div>
-                                <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="../assets/images/avtar.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
-                                </div>
-                                <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="../assets/images/avtar.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
-                                </div>
-                                <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="../assets/images/avtar.jpg" alt="#">
-                                    <h5>Mark Jecno</h5>
-                                    <h6>Designer</h6>
-                                </div>
-                                <div class="media-body">
-                                    <p>you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <<?php 
+                        }
+                    }
+                }
+            }
+                     ?>
+                       
                     </div>
                 </div>
             </div>

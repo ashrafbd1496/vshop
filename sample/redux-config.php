@@ -466,6 +466,66 @@ Redux::set_section( $opt_name,
 	
 )));
 
+Redux::set_section(
+	$opt_name,
+	array(
+		'title'      => __( 'Testimonial Options', 'vshop' ),
+		'id'		=>'testimonial',
+		'fields'     => array(
+			array(
+				'id'          => 'testimonial_items',
+				'type'        => 'repeater',
+				'title'       => esc_html__( 'Testimonial Items', 'vshop' ),
+				'full_width'  => true,
+				'group_values'  => true,
+				'item_name'   => '',
+				'sortable'    => true,
+				'active'      => false,
+				'collapsible' => false,
+				'fields'      => array(
+					array(
+						'id'          => 't_item_image',
+						'type'        => 'media',
+						'placeholder' => esc_html__( 'Testimonial Item Image', 'vshop' ),
+					),
+					array(
+						'id'          => 't_item_name',
+						'type'        => 'text',
+						'placeholder' => esc_html__( 'Testimonial Item Name', 'vshop' ),
+						'default'     => 'Abdul Kareem',
+					),
+					array(
+						'id'          => 't_item_desig',
+						'type'        => 'text',
+						'placeholder' => esc_html__( 'Testimonial Item Designation', 'vshop' ),
+							'default'     => 'Developer',
+					),
+					array(
+						'id'          => 't_item_desc',
+						'type'        => 'text',
+						'placeholder' => esc_html__( 'Testimonial Item Description', 'vshop' ),
+						'default'     => 'you how all this mistaken idea of denouncing pleasure and praising pain was born
+                                        and I will give you a complete account of the system, and expound the actual
+                                        teachings',
+					),
+					
+				),
+			),
+		),
+	)
+);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
