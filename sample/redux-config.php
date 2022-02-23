@@ -478,7 +478,7 @@ Redux::set_section(
 				'title'       => esc_html__( 'Testimonial Items', 'vshop' ),
 				'full_width'  => true,
 				'group_values'  => true,
-				'item_name'   => '',
+				'item_name'   => 'testimonials',
 				'sortable'    => true,
 				'active'      => false,
 				'collapsible' => false,
@@ -516,7 +516,21 @@ Redux::set_section(
 );
 
 
+Redux::set_section($opt_name,
+				array(
+					'id'	=>'test_section',
+					'title'	=>'Test Section',
+					'subsection'	=> true,
+					'fields' =>array(
+						array(
+							'id' =>'test_field',
+							'title' =>'Test Field of Test Section',
+							'type' =>'text',
+						),
 
+					),
+
+));
 
 
 

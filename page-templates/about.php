@@ -58,37 +58,45 @@
                     <div class="slide-2 testimonial-slider no-arrow">
 
                          <?php 
+                         $testimonials = $vshop_demo['testimonial_items'];
 
-                        $images = $vshop_demo['t_item_image'];
-                         $names= $vshop_demo['t_item_name'];
-                         $desigs = $vshop_demo['t_item_desig'];
-                         $descs = $vshop_demo['t_item_desc'];
+                         $images = $vshop_demo['testimonial_items']['t_item_image'];
+
+                         $names = $vshop_demo['testimonial_items']['t_item_name'];
+
+                         $desigs = $vshop_demo['testimonial_items']['t_item_desig'];
+
+                         $descs = $vshop_demo['testimonial_items']['t_item_desc'];
 
                          foreach($images as $image){
-                         foreach($names as $name){
-                            foreach($desigs as $desig){
-                                foreach($descs as $desc){ ?>
-                      
-                 
+                            foreach($names as $name){ 
+                                foreach($desigs as $desig){
+                                    foreach($descs as $desc){
+                            ?>
                           
                         <div>
                             <div class="media">
                                 <div class="text-center">
-                                    <img src="<?php echo $image['url']; ?>" alt="#">
-                                    <h5><?php  echo $name; ?></h5>
-                                    <h6><?php echo $desig;  ?></h6>
+                                    <img src="<?php echo $image['url'];?>" alt="#">
+
+                                    <h5><?php echo $name; ?></h5>
+                                                                      
+                                    <h6><?php echo $desig;?></h6>
                                 </div>
                                 <div class="media-body">
-                                   <?php echo $desc; ?>
+                                 <?php echo $desc; ?>
                                 </div>
                             </div>
                         </div>
-                    <<?php 
+
+                 <?php 
+                                     }
+                                 }
+                             }
                         }
-                    }
-                }
-            }
-                     ?>
+
+                 ?>
+                 
                        
                     </div>
                 </div>
