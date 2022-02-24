@@ -485,24 +485,28 @@ Redux::set_section(
 				'fields'      => array(
 					array(
 						'id'          => 't_item_image',
+						 'title'       => esc_html__('Testimonial Image', 'vshop'),
 						'type'        => 'media',
 						'placeholder' => esc_html__( 'Testimonial Item Image', 'vshop' ),
 					),
 					array(
 						'id'          => 't_item_name',
 						'type'        => 'text',
+						 'title'       => esc_html__('Testimonial name', 'vshop'),
 						'placeholder' => esc_html__( 'Testimonial Item Name', 'vshop' ),
 						'default'     => 'Abdul Kareem',
 					),
 					array(
 						'id'          => 't_item_desig',
 						'type'        => 'text',
+						 'title'       => esc_html__('Testimonial Designation', 'vshop'),
 						'placeholder' => esc_html__( 'Testimonial Item Designation', 'vshop' ),
 							'default'     => 'Developer',
 					),
 					array(
 						'id'          => 't_item_desc',
 						'type'        => 'text',
+						 'title'       => esc_html__('Testimonial Description', 'vshop'),
 						'placeholder' => esc_html__( 'Testimonial Item Description', 'vshop' ),
 						'default'     => 'you how all this mistaken idea of denouncing pleasure and praising pain was born
                                         and I will give you a complete account of the system, and expound the actual

@@ -51,7 +51,7 @@
 
 
     <!--Testimonial start-->
-    <section class="testimonial small-section">
+   <!--  <section class="testimonial small-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -102,8 +102,36 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--Testimonial ends-->
+
+       <!--test start-->
+    <section class="testimonial small-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <?php
+                            global $vshop_demo;
+                            $testimonials = $vshop_demo['testimonial_items'];
+                            foreach($testimonials as $item): ?>                  
+                        <div>
+                            <div class="media">
+                                <div class="text-center">
+                                    <img src="<?php echo $item['t_item_image']['url']; ?>" alt="#">
+                                    <h5><?php echo $item['t_item_name']; ?></h5>
+                                    <h6><?php  echo $item['t_item_desig'];?></h6>
+                                </div>
+                                <div class="media-body">
+                                   <?php echo $item['t_item_desc']; ?>
+                                </div>
+                            </div>
+                        </div>
+              <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <!--test ends-->
+
 
 
     <!--Team start-->
