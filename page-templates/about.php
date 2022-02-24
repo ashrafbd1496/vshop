@@ -51,56 +51,38 @@
 
 
     <!--Testimonial start-->
-   <!--  <section class="testimonial small-section">
+   <section class="testimonial small-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="slide-2 testimonial-slider no-arrow">
 
                          <?php 
-                         $testimonials = $vshop_demo['testimonial_items'];
+                         $testimonials = $vshop_demo['testimonial'];
+                         $i = 0;
+                         foreach($testimonials as $item):
+                            if($testimonials['t_item_image'][$i]['url'] || $testimonials['t_item_name'][$i]):
 
-                         $images = $vshop_demo['testimonial_items']['t_item_image'];
-
-                         $t_names = $vshop_demo['testimonial_items']['t_item_name'];
-
-                         $desigs = $vshop_demo['testimonial_items']['t_item_desig'];
-
-                         $descs = $vshop_demo['testimonial_items']['t_item_desc'];
-                            // print_r($testimonials);
-                            // die();
-                                
-                            $keys = array_keys($testimonials);
-                            for($i = 0; $i < count($testimonials); $i++) {
-                               foreach($testimonials[$keys[$i]] as $value) { 
-                               
-                             
-                            
-                                                        ?>
+                                   ?>
                           
                         <div>
                             <div class="media">
                                 <div class="text-center">
-                                    <img src="<?php //echo $image['url'];?>" alt="#">
-                                    <?php
-                                    foreach($value as $v){
-                                       ?>
-                                    }
-                                    <h5><?php echo $v['t_item_name']; ?></h5>
-                                <?php } ?>
-
-                                       
+                                    <img src="<?php echo $testimonials['t_item_image'][$i]['url'];?>" alt="#">
+                                    <h5><?php echo $testimonials['t_item_name'][$i]; ?></h5>
                                                                       
-                                    <h6><?php //echo $desig;?></h6>
+                                    <h6><?php echo $testimonials['t_item_desig'][$i];?></h6>
                                 </div>
                                 <div class="media-body">
-                                 <?php //echo $desc; ?>
+                                 <?php echo $testimonials['t_item_desc'][$i]; ?>
                                 </div>
                             </div>
                         </div>
 
                  <?php 
-                   }}
+                  endif;
+                  $i++;
+              endforeach;
                  ?>
                  
                        
@@ -108,37 +90,8 @@
                 </div>
             </div>
         </div>
-    </section> -->
-    <!--Testimonial ends-->
-
-       <!--test start-->
-     <section class="testimonial small-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <?php
-                            global $vshop_demo;
-                            $testimonials = $vshop_demo['testimonial'];
-                            //var_dump($testimonials);
-                            foreach($testimonials as $item): ?>                  
-                        <div>
-                            <div class="media">
-                                <div class="text-center">
-                                    <img src="<?php echo $item['t_item_image']['url']; ?>" alt="#">
-                                    <h5><?php echo $item['t_item_name']; ?></h5>
-                                    <h6><?php  echo $item['t_item_desig'];?></h6>
-                                </div>
-                                <div class="media-body">
-                                   <?php echo $item['t_item_desc']; ?>
-                                </div>
-                            </div>
-                        </div>
-              <?php endforeach; ?>
-            </div>
-        </div>
     </section>
-    <!--test ends-->
-
+    <!--Testimonial ends-->
 
 
     <!--Team start-->
