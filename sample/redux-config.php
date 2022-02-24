@@ -473,7 +473,7 @@ Redux::set_section(
 		'id'		=>'testimonial',
 		'fields'     => array(
 			array(
-				'id'          => 'testimonial_items',
+				'id'          => 'testimonial',
 				'type'        => 'repeater',
 				'title'       => esc_html__( 'Testimonial Items', 'vshop' ),
 				'full_width'  => true,

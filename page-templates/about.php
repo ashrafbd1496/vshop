@@ -62,39 +62,45 @@
 
                          $images = $vshop_demo['testimonial_items']['t_item_image'];
 
-                         $names = $vshop_demo['testimonial_items']['t_item_name'];
+                         $t_names = $vshop_demo['testimonial_items']['t_item_name'];
 
                          $desigs = $vshop_demo['testimonial_items']['t_item_desig'];
 
                          $descs = $vshop_demo['testimonial_items']['t_item_desc'];
-
-                         foreach($images as $image){
-                            foreach($names as $name){ 
-                                foreach($desigs as $desig){
-                                    foreach($descs as $desc){
-                            ?>
+                            // print_r($testimonials);
+                            // die();
+                                
+                            $keys = array_keys($testimonials);
+                            for($i = 0; $i < count($testimonials); $i++) {
+                               foreach($testimonials[$keys[$i]] as $value) { 
+                               
+                             
+                            
+                                                        ?>
                           
                         <div>
                             <div class="media">
                                 <div class="text-center">
-                                    <img src="<?php echo $image['url'];?>" alt="#">
+                                    <img src="<?php //echo $image['url'];?>" alt="#">
+                                    <?php
+                                    foreach($value as $v){
+                                       ?>
+                                    }
+                                    <h5><?php echo $v['t_item_name']; ?></h5>
+                                <?php } ?>
 
-                                    <h5><?php echo $name; ?></h5>
+                                       
                                                                       
-                                    <h6><?php echo $desig;?></h6>
+                                    <h6><?php //echo $desig;?></h6>
                                 </div>
                                 <div class="media-body">
-                                 <?php echo $desc; ?>
+                                 <?php //echo $desc; ?>
                                 </div>
                             </div>
                         </div>
 
                  <?php 
-                                     }
-                                 }
-                             }
-                        }
-
+                   }}
                  ?>
                  
                        
@@ -106,13 +112,14 @@
     <!--Testimonial ends-->
 
        <!--test start-->
-    <section class="testimonial small-section">
+     <section class="testimonial small-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <?php
                             global $vshop_demo;
-                            $testimonials = $vshop_demo['testimonial_items'];
+                            $testimonials = $vshop_demo['testimonial'];
+                            //var_dump($testimonials);
                             foreach($testimonials as $item): ?>                  
                         <div>
                             <div class="media">
