@@ -470,7 +470,7 @@ Redux::set_section(
 	$opt_name,
 	array(
 		'title'      => __( 'Testimonial Options', 'vshop' ),
-		'id'		=>'testimonial',
+		'id'		=>'testimonial_section',
 		'fields'     => array(
 			array(
 				'id'          => 'testimonial',
