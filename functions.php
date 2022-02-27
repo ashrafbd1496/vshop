@@ -242,3 +242,94 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+
+// Creating the Map widget 
+class map_widget extends WP_Widget {
+  
+function __construct() {
+parent::__construct(
+  
+// Base ID of your widget
+'map_widget', 
+  
+// Widget name will appear in UI
+__('Vshop Map Widget', 'vshop'), 
+  
+// Widget description
+array( 'description' => __( 'Vshop Map Widget', 'vshop' ), ) 
+);
+}
+  
+// Creating widget front-end
+
+public function widget( $args, $instance ) {
+$title = apply_filters( 'widget_title', $instance['title'] );
+  
+// before and after widget arguments are defined by themes
+echo $args['before_widget'];
+if ( ! empty( $title ) )
+echo $args['before_title'] . $title . $args['after_title'];
+
+  
+// This is where you run the code and display the output
+echo __( '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236207.01563478992!2d91.67977993957443!3d22.325874170558105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1645938172022!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>', 'vshop' );
+
+//echo $args['after_widget'];
+
+
+
+}
+          
+// Widget Backend 
+public function form( $instance ) {
+if ( isset( $instance[ 'title' ] ) ) {
+$title = $instance[ 'title' ];
+}
+else {
+$title = __( 'Map Widget', 'vshop' );
+}
+// Widget admin form
+?>
+<p>
+<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+</p>
+<?php 
+}
+      
+// Updating widget replacing old instances with new
+public function update( $new_instance, $old_instance ) {
+$instance = array();
+$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+return $instance;
+}
+ 
+// Class map_widget ends here
+} 
+ 
+ 
+// Register and load the widget
+function load_map_widget() {
+    register_widget( 'map_widget' );
+
+}
+
+add_action( 'widgets_init', 'load_map_widget' );
+
+
+function vshop_widgets() {
+
+ register_sidebar( array(
+        'name'          => 'Map Widget',
+        'id'            => 'map_widget',
+        'before_widget' => ' ',
+        'after_widget'  => ' ',
+        //'before_title'  => '<h2 class="chw-title">',
+        //'after_title'   => '</h2>',
+    ) );
+}
+
+ add_action( 'widgets_init', 'vshop_widgets' ); 

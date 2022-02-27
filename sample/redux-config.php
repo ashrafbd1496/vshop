@@ -323,6 +323,12 @@ Redux::set_section( $opt_name,
 	'id'     => 'vshop_banner',
 	'subsection'=> true,
 	'fields'	=>array(
+		array(
+	 	'id'          => 'show_section',
+	    'type'        => 'switch',
+	    'title'       => esc_html__('Show/Hide banner Section', 'vshop'),
+	    'default'	=>true,
+		),
 	   
 	    array(
 	 	'id'          => 'v_banner',
@@ -466,6 +472,7 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Testimonial Section
 Redux::set_section(
 	$opt_name,
 	array(
@@ -520,35 +527,125 @@ Redux::set_section(
 );
 
 
+//Team Section Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Team Slider', 'vshop' ),
+	'id'     => 'team_slider',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'show_team_section',
+	    'type'        => 'switch',
+	    'title'       => esc_html__('Show/Hide Slider Section', 'vshop'),
+	    'default'	=>true,
+		),
+		array(
+			'id'	=>'team_title',
+			'type'	=>'text',
+			'title'	=>'Team Section Title',
+			'default'	=> esc_html__('Our Team', 'vshop'),
+		),
+	   
+	    array(
+	 	'id'          => 'team_member',
+	    'type'        => 'slides',
+	    'title'       => esc_html__('Team Slides Options', 'vshop'),
+	    'placeholder' => array(
+	        'title'       => esc_html__('Team Member Name', 'vshop'),
+	        'description' => esc_html__('Member Designation', 'vshop'),
+	        
+	   ) ),
+
+	
+)));
+
+//About Us Service Section
+
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Service  Options', 'vshop' ),
+	'id'     => 'aboutus_service',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'show_service_section',
+	    'type'        => 'switch',
+	    'title'       => esc_html__('Show/Hide Service Section', 'vshop'),
+	    'default'	=>true,
+		),
+	
+)));
+
+//Contact Page Options
 Redux::set_section($opt_name,
-				array(
-					'id'	=>'test_section',
-					'title'	=>'Test Section',
-					'subsection'	=> true,
-					'fields' =>array(
-						array(
-							'id' =>'test_field',
-							'title' =>'Test Field of Test Section',
-							'type' =>'text',
-						),
+	array(
+		'title'	=>esc_html__( 'Contact Page  Options', 'vshop' ),
+		'id'	=>'contact_options',
+		'icon'	=>'el el-edit',
+		'fields'	=>array(
+			array(
+				'id'	=>'contact_number_title',
+				 'type' => 'text',
+				'title'	=> esc_html__('Contact Number Title', 'vshop'),
+				'default'	=>'Contact Us',
 
-					),
+			),
+			array(
+				'id'	=>'contact_number',
+				 'type' => 'textarea',
+				'title'	=> esc_html__('Contact Phone', 'vshop'),
+				'default'	=>'+91 123 - 456 - 7890',
 
-));
+			),
+
+			array(
+				'id'	=>'contact_address_title',
+				 'type' => 'text',
+				'title'	=> esc_html__('Contact addresss Title', 'vshop'),
+				'default'	=>'Address',
+
+
+			),
+
+			array(
+				'id'	=>'contact_address',
+				 'type' => 'textarea',
+				'title'	=> esc_html__('Contact addresss', 'vshop'),
+				'default'	=>'ABC Complex,Near xyz, New York',
+
+
+			),
+			array(
+				'id'	=>'contact_email',
+				 'type' => 'textarea',
+				'title'	=> esc_html__('Contact Email', 'vshop'),
+				'default'	=>'Support@webdevbd.net',
+
+
+			),
+			array(
+				'id'	=>'contact_fax_title',
+				 'type' => 'text',
+				'title'	=> esc_html__('Contact Fax Title', 'vshop'),
+				'default'	=>'Fax',
+
+
+			),
+			array(
+				'id'	=>'contact_fax',
+				 'type' => 'textarea',
+				'title'	=> esc_html__('Contact Fax', 'vshop'),
+				'default'	=>'info@webdevbd.net',
+
+
+			),
+		),
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+	));
 
 
 //Footer options
@@ -622,7 +719,6 @@ Redux::set_section( $opt_name,
 	   ) ),
 	
 )));
-
 
 
 

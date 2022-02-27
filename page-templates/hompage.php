@@ -48,7 +48,7 @@
     <!-- Home slider end -->
 
 
-    <!-- collection banner -->
+    <!-- collection banner or Service Section -->
     
     <section class="banner-padding absolute-banner pb-0">
         <div class="container absolute-bg">
