@@ -333,3 +333,4 @@ function vshop_widgets() {
 }
 
  add_action( 'widgets_init', 'vshop_widgets' ); 
+ 

@@ -87,36 +87,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <form class="theme-form">
-                        <div class="form-row row">
-                            <div class="col-md-6">
-                                <label for="name">First Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Your name"
-                                    required="">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" placeholder="Email" required="">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="review">Phone number</label>
-                                <input type="text" class="form-control" id="review" placeholder="Enter your number"
-                                    required="">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Email" required="">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="review">Write Your Message</label>
-                                <textarea class="form-control" placeholder="Write Your Message"
-                                    id="exampleFormControlTextarea1" rows="6"></textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <button class="btn btn-solid" type="submit">Send Your Message</button>
-                            </div>
-                        </div>
-                    </form>
+
+                    <?php echo do_shortcode('[contact-form-7 id="153" title="contact page form"]'); ?>
+
+
                 </div>
             </div>
         </div>

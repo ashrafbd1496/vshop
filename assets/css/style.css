@@ -1099,6 +1099,10 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none; }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .btn-solid {
   padding: 13px 29px;
   color: #ffffff;
