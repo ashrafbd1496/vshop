@@ -616,13 +616,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	/*border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 0.6em 1em 0.4em;*/
 }
 
 button:hover,
@@ -659,10 +659,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
+	/*color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 3px;*/
 }
 
 input[type="text"]:focus,
