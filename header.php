@@ -286,10 +286,8 @@
         <div class="col-lg-12">
             <div class="main-nav-center">
                 <nav id="main-nav">
-                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
 
-                     <?php 
-
+                      <?php 
                         wp_nav_menu(array(
 
                             'theme_location'    => 'main-menu',
@@ -299,14 +297,7 @@
                           
                     )); ?>
 
-                    <!-- <ul id="main-menu" class="sm pixelstrap sm-horizontal">
-                        <li>
-                            <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2"
-                                    aria-hidden="true"></i></div>
-                        </li>
-                        <li><a href="<?php //echo site_url(); ?>">Home</a></li>
-                       
-                    </ul> -->
+                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
                 </nav>
             </div>
         </div>
@@ -314,4 +305,5 @@
 </div>
 </header>
 <!-- header end -->
+
 
