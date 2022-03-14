@@ -92,11 +92,11 @@
                                  </span>
                                  </div>
                                 <div class="media-body align-self-center">
-                                    <h6>Injected humour the like</h6>
+                                    <h6><?php echo wp_trim_words( get_the_title(), 4,);?></h6>
                                     <p>0 hits</p>
                                 </div>
                             </div>
-                            <p>it look like readable English. Many desktop publishing text.</p>
+                            <p><?php echo wp_trim_words( get_the_content(), 10,);?></p>
                         </li>
                           <?php }
                       wp_reset_postdata();
