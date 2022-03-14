@@ -70,7 +70,9 @@ input[type="submit"]:hover{
     }
 
 
-
+ul.post-social, ul.recent-blog{
+	margin: 0 !important;
+}
 
 
 

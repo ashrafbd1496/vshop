@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * ReduxFramework Barebones Sample Config File
  * For full documentation, please visit: http://devs.redux.io/

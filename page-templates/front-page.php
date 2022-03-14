@@ -52,7 +52,9 @@
         <div class="container absolute-bg">
             <div class="service p-0">
                 <div class="row">
-                      <?php $v_banner = $vshop_demo['v_banner'];
+                      <?php 
+                      global $vshop_demo;
+                      $v_banner = $vshop_demo['v_banner'];
                     foreach($v_banner as $vbanner ): ?>
 
 
