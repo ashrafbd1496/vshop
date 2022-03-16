@@ -247,6 +247,7 @@ Redux::set_section(
 	'id'     => 'vshop_homepage',
 	'desc'   => esc_html__( 'Homepage Options are here.', 'vshop' ),
 	'icon'   => 'el el-home',
+
 ));
 
 //Header Options
@@ -474,59 +475,34 @@ Redux::set_section( $opt_name,
 	
 )));
 
-//Testimonial Section
-Redux::set_section(
-	$opt_name,
+
+//Testimonial section usig slides
+Redux::set_section( $opt_name,
 	array(
-		'title'      => __( 'Testimonial Options', 'vshop' ),
-		'id'		=>'testimonial_section',
-		'fields'     => array(
-			array(
-				'id'          => 'testimonial',
-				'type'        => 'repeater',
-				'title'       => esc_html__( 'Testimonial Items', 'vshop' ),
-				'full_width'  => true,
-				'group_values'  => true,
-				'item_name'   => 'testimonials',
-				'sortable'    => true,
-				'active'      => false,
-				'collapsible' => false,
-				'fields'      => array(
-					array(
-						'id'          => 't_item_image',
-						 'title'       => esc_html__('Testimonial Image', 'vshop'),
-						'type'        => 'media',
-						'placeholder' => esc_html__( 'Testimonial Item Image', 'vshop' ),
-					),
-					array(
-						'id'          => 't_item_name',
-						'type'        => 'text',
-						 'title'       => esc_html__('Testimonial name', 'vshop'),
-						'placeholder' => esc_html__( 'Testimonial Item Name', 'vshop' ),
-						'default'     => 'Abdul Kareem',
-					),
-					array(
-						'id'          => 't_item_desig',
-						'type'        => 'text',
-						 'title'       => esc_html__('Testimonial Designation', 'vshop'),
-						'placeholder' => esc_html__( 'Testimonial Item Designation', 'vshop' ),
-							'default'     => 'Developer',
-					),
-					array(
-						'id'          => 't_item_desc',
-						'type'        => 'text',
-						 'title'       => esc_html__('Testimonial Description', 'vshop'),
-						'placeholder' => esc_html__( 'Testimonial Item Description', 'vshop' ),
-						'default'     => 'you how all this mistaken idea of denouncing pleasure and praising pain was born
-                                        and I will give you a complete account of the system, and expound the actual
-                                        teachings',
-					),
-					
-				),
-			),
+	'title'  => esc_html__( 'Testimonial Slider', 'vshop' ),
+	'id'     => 'testimonial_slider',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'show_testimonial_section',
+	    'type'        => 'switch',
+	    'title'       => esc_html__('Show/Hide Testimonial Section', 'vshop'),
+	    'default'	=>true,
 		),
-	)
-);
+	   
+	    array(
+	 	'id'          => 'testimonial_slide',
+	    'type'        => 'slides',
+	    'title'       => esc_html__('Testimonial Slides Options', 'vshop'),
+	    'placeholder' => array(
+	         'title'       => esc_html__('Satisfied Customer Name', 'vshop'),
+	        'designation' => esc_html__('Customer Designation', 'vshop'),
+	        'description' => esc_html__('Testimonial description text here', 'vshop'),
+	       
+),
+	),
+	  
+	)));
 
 
 //Team Section Options
@@ -721,11 +697,6 @@ Redux::set_section( $opt_name,
 	   ) ),
 	
 )));
-
-
-
-
-
 
 
 
