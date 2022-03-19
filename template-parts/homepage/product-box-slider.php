@@ -1,4 +1,5 @@
    <!-- product-box slider -->
+   <?php global $vshop_demo; ?>
     <section class="section-b-space addtocart_count">
         <div class="full-box">
             <div class="container">
@@ -21,7 +22,7 @@
                                                         class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                                         class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                                 <a href="product-page(no-sidebar).html">
-                                                    <h6>Slim Fit Cotton Shirt</h6>
+                                                    <h6>Onion Slice</h6>
                                                 </a>
                                                 <h4>$500.00</h4>
                                             </div>
@@ -37,7 +38,7 @@
                                                         class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                                         class="fa fa-star"></i> <i class="fa fa-star"></i></div>
                                                 <a href="product-page(no-sidebar).html">
-                                                    <h6>Slim Fit Cotton Shirt</h6>
+                                                    <h6>kale</h6>
                                                 </a>
                                                 <h4>$500.00</h4>
                                             </div>

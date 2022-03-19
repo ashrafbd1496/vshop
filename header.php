@@ -3,7 +3,8 @@
 
 <?php wp_head(); ?>
 
-<body class="theme-color-1">
+<!-- <body class="theme-color-1"> -->
+<body <?php body_class('theme-color-1'); ?>>
 <?php global $vshop_demo; ?>
 <!-- header start -->
 <header class="header-2">

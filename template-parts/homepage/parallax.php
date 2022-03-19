@@ -1,4 +1,4 @@
-
+<?php global $vshop_demo; ?>
  <!-- Parallax banner -->
     <section class="p-0">
         <div class="full-banner parallax text-start p-left">

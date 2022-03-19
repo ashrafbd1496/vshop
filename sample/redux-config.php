@@ -698,6 +698,37 @@ Redux::set_section( $opt_name,
 	
 )));
 
+//Woocommerce options
+Redux::set_section(
+	$opt_name,
+	array(
+	'title'  => esc_html__( 'WooCommerce Options', 'vshop' ),
+	'id'     => 'vshop_woocommerce',
+	'desc'   => esc_html__( 'Woocommerce Options are here.', 'vshop' ),
+	'icon'   => 'el el-shopping-cart',
+
+));
+
+//Shop Page Options
+Redux::set_section( $opt_name,
+	array(
+	'title'  => esc_html__( 'Shop Page Options', 'vshop' ),
+	'id'     => 'shoppage_options',
+	'subsection'=> true,
+	'fields'	=>array(
+		array(
+	 	'id'          => 'products_columns',
+	    'type'        => 'text',
+	    'title'       => esc_html__('products_columns', 'vshop'),
+	    'default'	=>4,
+	     
+	),
+
+	),
+	
+));
+
+
 
 
 

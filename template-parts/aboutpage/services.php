@@ -1,5 +1,7 @@
     <!-- service section -->
-    <?php if($vshop_demo['show_service_section']==1): ?>
+    <?php 
+    global $vshop_demo;
+    if($vshop_demo['show_service_section']==1): ?>
     <div class="container about-cls section-b-space">
         <section class="service border-section small-section">
             <div class="row">
